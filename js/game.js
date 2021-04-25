@@ -71,7 +71,7 @@ function draw() {
             || yBirdPosition + bird.height - 5 >= pipes[i].y + pipeUp.height + gap)
          || yBirdPosition + bird.height - 5 >= canvas.height - foreground.height) {
 
-         fallAudio.play();
+         fallAudio.play();//
          yBirdPosition = 190;
          init();
          return;
