@@ -7,16 +7,23 @@ const foreground = new Image();
 const pipeBottom = new Image();
 const pipeUp = new Image();
 
+const flyAudio = new Audio();
+const scoreAudio = new Audio();
+
 bird.src = "img/bird.png";
 background.src = "img/background.png";
 foreground.src = "img/foreground.png";
 pipeBottom.src = "img/pipeBottom.png";
 pipeUp.src = "img/pipeUp.png";
 
+flyAudio.src = "audio/fly.mp3";
+scoreAudio.src = "audio/score.mp3";
+
 document.addEventListener("keydown", moveBirdUp);
 
 function moveBirdUp() {
    yBirdPosition -= 40;
+   flyAudio.play();
 }
 
 const pipes = [];
@@ -60,6 +67,7 @@ function draw() {
 
       if (pipes[i].x === 5) {
          ++score;
+         scoreAudio.play();
       }
    }
 
