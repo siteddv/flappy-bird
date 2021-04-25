@@ -11,6 +11,7 @@ const losePage = new Image();
 
 const flyAudio = new Audio();
 const scoreAudio = new Audio();
+const fallAudio = new Audio();
 
 bird.src = "img/bird.png";
 background.src = "img/background.png";
@@ -22,6 +23,7 @@ losePage.src = "img/losePage.jpg";
 
 flyAudio.src = "audio/fly.mp3";
 scoreAudio.src = "audio/score.mp3";
+fallAudio.src = "audio/fall.mp3";
 
 document.addEventListener("keydown", keyDown);
 
@@ -57,7 +59,6 @@ function draw() {
       --pipes[i].x;
 
       if (pipes[i].x === 125) {
-         console.log("new");
          pipes.push({
             x: canvas.width,
             y: Math.floor(Math.random() * pipeUp.height) - pipeUp.height,
@@ -70,6 +71,7 @@ function draw() {
             || yBirdPosition + bird.height - 5 >= pipes[i].y + pipeUp.height + gap)
          || yBirdPosition + bird.height - 5 >= canvas.height - foreground.height) {
 
+         fallAudio.play();
          yBirdPosition = 190;
          init();
          return;
