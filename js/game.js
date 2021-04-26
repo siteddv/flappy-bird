@@ -28,7 +28,8 @@ fallAudio.src = "audio/fall.mp3";
 document.addEventListener("keydown", keyDown);
 document.addEventListener("mousedown", keyDown);
 
-function keyDown() {
+function keyDown(event) {
+   event.preventDefault();
    yBirdPosition -= 40;
    flyAudio.play();
    if (isStopped) {
