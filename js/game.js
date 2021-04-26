@@ -26,8 +26,8 @@ scoreAudio.src = "audio/score.mp3";
 fallAudio.src = "audio/fall.mp3";
 
 document.addEventListener("keydown", keyDown);
-
 document.addEventListener("mousedown", keyDown);
+document.addEventListener("touchstart", keyDown);
 
 function keyDown() {
    yBirdPosition -= 40;
