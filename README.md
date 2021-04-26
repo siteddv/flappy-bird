@@ -14,7 +14,7 @@
 * Game board
 
 ## Links
-###### [Link to the site](vino-gradom.github.io/flappy-bird/)
+###### [Link to the site](https://vino-gradom.github.io/flappy-bird/)
 ###### [Download ZIP](https://github.com/vino-gradom/flappy-bird/archive/refs/heads/master.zip)
 
 ## How to clone the repository to a local machine?
